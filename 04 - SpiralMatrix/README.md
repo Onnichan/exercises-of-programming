@@ -3,11 +3,7 @@ EJERCICIO MATRIZ ESPIRAL
 Author: Walter Daniel Huaynapata Aguilar
 
 
-Este ejercicio realmente se me complicó bastante pero se pudo resolver,
-cabe recalcar que no esta optimizado ya que al imprimir la matriz se demora bastante debido a que lo realicé secuencialmente.
-
-Comenzaré a explicar los pasos que realicé primeramente para mostrar 
-la matriz en espiral desde el centro
+Este ejercicio consta de calcular la suma de las diagonales de una matriz en espiral desde el centro, para eso se tiene primero que rellenar los valores de la matriz a la derecha en sentido horario.
 
  ```
   21 22 23 24 25
@@ -16,6 +12,11 @@ la matriz en espiral desde el centro
   18 5  4  3  12
   17 16 15 14 13 
   ```
+
+Como resultado de la suma de las diagonales de la matriz anterior es de: 101
+
+Y el ejercicio pide calcular la suma de las diagonales para una matriz de dimensión 1003 X 1003
+
 
 Problemas al plantear el ejercicio:
 
