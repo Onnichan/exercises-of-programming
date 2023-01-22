@@ -17,13 +17,11 @@ la matriz en espiral desde el centro
   17 16 15 14 13 
   ```
 
-Explicación de la solución
+Problemas al plantear el ejercicio:
 
-* Problemas al plantear el ejercicio:
+* Al analizar el ejercicio uno se da cuenta que lo más complicado será el generar la matriz en espiral desde el centro, al menos en mi caso.
 
-  Al analizar el ejercicio uno se da cuenta que lo más complicado será el generar la matriz en espiral desde el centro, al menos en mi caso.
-
-* Otro problema quizas sería el realizar la suma de la diagonal inferior de la matriz ya que no salta tanto a la vista.
+* Otro problema quizas sería el realizar la suma de la diagonal secundaria de la matriz ya que no salta tanto a la vista.
 
 * Y por último yo diría la optimización del algoritmo debido a que el algoritmo que yo planteé no es muy eficiente en cuanto a dimensiones mas grandes.
 
@@ -40,7 +38,7 @@ function matrixCenter(n) {
 
 de ahi dentro de la función creé algunas variables 
 como 
-a, b: que son las variables para  
+a, b: que son las variables que tomar el valor central de la matriz porque en este ejercicio se empieza desde el centro
 arr : que es la matriz inicial que después servirá para crear la matriz de dos dimensiones
 value : el valor inicial 
 result : variable para la suma de las diagonales de la matriz
@@ -61,9 +59,16 @@ for (let k = 0; k < arr.length; k++) {
 }
 ```
 
+Aqui comenzamos por inicializar el centro de la matriz con el valor de 1, por ejemplo en una matriz de 3 x 3, la variable a tomaría el valor de a = 2 debido al redondeo que se puso en la declaración y asignación de la variable `a` en el comienzo de la función, y por ende `arr[a][a] = arr[2][2] = 1` 
 
 ```
 arr[a][a] = value++;
+```
+
+```
+7 8 9 
+6 1 2
+5 4 3
 ```
 
 Este bloque de código es donde se hace la magia, ya que aquí es donde se genera el valor de cada coordenada de la matriz, realizandolo de manera secuencial
@@ -99,16 +104,16 @@ Por ejemplo en una matriz de 3 x 3
 5 4 3
 ```
 con el siguiente bucle podemos tomar los valores 2 y 3 gracias a los valores de a y b 
-
-Nota: Los valores a y b nos sirven como índices, ya que en un comienzo toman los valores de las coordenadas (x,y) del valor del centro que es 1 que tendría como coordenada (1,1) = (a,b), a medida que se van recorriendo la matriz el valor de b va incrementarse hasta llegar al tamaño de la matriz y el valor de a decrementará hasta llegar al inicio de la matriz que sería el valor de 0 
-
-A medida que se vaya recorriendo la matriz el valor de la variable ``` value ``` incrementará hasta tomar todos los valores de la matriz.
 ```
 for (let i = a; i <= b; i++) {
   arr[i][b] = value++;
 }
 a--;
 ```
+
+Nota: Los valores a y b nos sirven como índices, ya que en un comienzo toman los valores de las coordenadas (x,y) del valor del centro que es 1 que tendría como coordenada (1,1) = (a,b), a medida que se van recorriendo la matriz el valor de b va incrementarse hasta llegar al tamaño de la matriz y el valor de a decrementará hasta llegar al inicio de la matriz que sería el valor de 0 
+
+A medida que se vaya recorriendo la matriz el valor de la variable ``` value ``` incrementará hasta tomar todos los valores de la matriz.
 
 Siguiendo con el ejemplo de una matriz de 3 x 3, con este bloque de código se puede rellenar los valores 
 de 4 y 5
