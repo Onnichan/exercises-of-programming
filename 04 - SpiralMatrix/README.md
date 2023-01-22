@@ -28,6 +28,8 @@ Problemas al plantear el ejercicio:
 
 Resolución del problema
 
+`NOTA: Esta resolución del ejercicio solo me funcionó para dimensiones impares, y para pares no me funciona `
+
 Para comenzar yo creé una función matrixCenter(n)
 que recibe un parámetro n que es la dimensión de la matriz
 

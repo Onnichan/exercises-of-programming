@@ -44,4 +44,4 @@ function matrixCenter(n) {
   console.log("La suma de las diagonales es: ", result);
 }
 
-matrixCenter(1003);
+matrixCenter(5);
