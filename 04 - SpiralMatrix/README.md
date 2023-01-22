@@ -103,7 +103,7 @@ Por ejemplo en una matriz de 3 x 3
 6 1 2
 5 4 3
 ```
-con el siguiente bucle podemos tomar los valores 2 y 3 gracias a los valores de a y b 
+con el siguiente bucle podemos tomar los valores 2 y 3 gracias a los valores de a y b que toman teniendo en cuenta que la matriz sea de 3 x 3, que `a = 1` y `b = 2` y por último decrementar el valor de a en 1 para el siguiente bucle for  
 ```
 for (let i = a; i <= b; i++) {
   arr[i][b] = value++;
@@ -111,7 +111,7 @@ for (let i = a; i <= b; i++) {
 a--;
 ```
 
-Nota: Los valores a y b nos sirven como índices, ya que en un comienzo toman los valores de las coordenadas (x,y) del valor del centro que es 1 que tendría como coordenada (1,1) = (a,b), a medida que se van recorriendo la matriz el valor de b va incrementarse hasta llegar al tamaño de la matriz y el valor de a decrementará hasta llegar al inicio de la matriz que sería el valor de 0 
+Nota: Los valores a y b nos sirven como índices, ya que en un comienzo toman los valores de las coordenadas (x,y), por ejemplo el valor central de una matriz 3 x 3  donde se comienza a rellenar la matriz es (1,1) = 1, pero a y b en un comienzo toman los valores de (1,2) = (a,b) porque ya hemos asignado el valor de `arr[1][1] = 1` antes, a medida que se van recorriendo la matriz el valor de b va incrementarse hasta llegar al tamaño de la matriz y el valor de a decrementará hasta llegar al inicio de la matriz que sería el valor de 0 
 
 A medida que se vaya recorriendo la matriz el valor de la variable ``` value ``` incrementará hasta tomar todos los valores de la matriz.
 
